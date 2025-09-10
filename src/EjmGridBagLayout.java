@@ -2,12 +2,13 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-public class EjmGridBagLayout extends JFrame {
-    public EjmGridBagLayout() {
-        setTitle("Ejemplo de GridBagLayout");
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setSize(800, 400);
-        setLocationRelativeTo(null);
+public class EjmGridBagLayout {
+    public static void main(String[] args) {
+        JFrame miVentana = new JFrame();
+        miVentana.setTitle("Ejemplo de GridBagLayout");
+        miVentana.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        miVentana.setSize(800, 400);
+        miVentana.setLocationRelativeTo(null);
 
         // Panel principal con GridBagLayout
         JPanel panelGeneral = new JPanel(new GridBagLayout());
@@ -76,13 +77,10 @@ public class EjmGridBagLayout extends JFrame {
         panelGeneral.add(btnCancelar, gbc);
 
         // Agregamos panel al frame
-        add(panelGeneral);
+        miVentana.add(panelGeneral);
 
 
-        setVisible(true);
+        miVentana.setVisible(true);
     }
 
-    public static void main(String[] args) {
-        SwingUtilities.invokeLater(() -> new EjmGridBagLayout());
-    }
 }
